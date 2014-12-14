@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'adduser' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 verbose adduser before first PUT { name: 'jackokring',
+5 verbose adduser   password: 'XXXXX',
+5 verbose adduser   email: 'jacko@kring.co.uk',
+5 verbose adduser   _id: 'org.couchdb.user:jackokring',
+5 verbose adduser   type: 'user',
+5 verbose adduser   roles: [],
+5 verbose adduser   date: '2014-12-13T16:37:22.553Z' }
+6 verbose request where is /-/user/org.couchdb.user:jackokring
+7 verbose request registry https://registry.npmjs.org/
+8 verbose request id 9785f51ce3d02efe
+9 verbose url raw /-/user/org.couchdb.user:jackokring
+10 verbose url resolving [ 'https://registry.npmjs.org/',
+10 verbose url resolving   './-/user/org.couchdb.user:jackokring' ]
+11 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:jackokring
+12 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:jackokring
+13 info trying registry request attempt 1 at 16:37:22
+14 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:jackokring
+15 http 409 https://registry.npmjs.org/-/user/org.couchdb.user:jackokring
+16 verbose headers { date: 'Sat, 13 Dec 2014 16:37:26 GMT',
+16 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+16 verbose headers   'content-type': 'application/json',
+16 verbose headers   'cache-control': 'max-age=60',
+16 verbose headers   'content-length': '58',
+16 verbose headers   'accept-ranges': 'bytes',
+16 verbose headers   via: '1.1 varnish',
+16 verbose headers   'x-served-by': 'cache-lcy1120-LCY',
+16 verbose headers   'x-cache': 'MISS',
+16 verbose headers   'x-cache-hits': '0',
+16 verbose headers   'x-timer': 'S1418488646.350916,VS0,VE599',
+16 verbose headers   'keep-alive': 'timeout=10, max=50',
+16 verbose headers   connection: 'Keep-Alive' }
+17 verbose adduser update existing user
+18 verbose request where is /-/user/org.couchdb.user:jackokring?write=true
+19 verbose request registry https://registry.npmjs.org/
+20 verbose url raw /-/user/org.couchdb.user:jackokring?write=true
+21 verbose url resolving [ 'https://registry.npmjs.org/',
+21 verbose url resolving   './-/user/org.couchdb.user:jackokring?write=true' ]
+22 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:jackokring?write=true
+23 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:jackokring?write=true
+24 info trying registry request attempt 1 at 16:37:29
+25 http GET https://registry.npmjs.org/-/user/org.couchdb.user:jackokring?write=true
+26 http 200 https://registry.npmjs.org/-/user/org.couchdb.user:jackokring?write=true
+27 verbose adduser userobj { name: 'jackokring',
+27 verbose adduser   password: 'XXXXX',
+27 verbose adduser   email: 'jacko@kring.co.uk',
+27 verbose adduser   _id: 'org.couchdb.user:jackokring',
+27 verbose adduser   type: 'user',
+27 verbose adduser   roles: [],
+27 verbose adduser   date: '2014-12-13T16:37:22.553Z' }
+28 verbose request where is /-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+29 verbose request registry https://registry.npmjs.org/
+30 verbose url raw /-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+31 verbose url resolving [ 'https://registry.npmjs.org/',
+31 verbose url resolving   './-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca' ]
+32 verbose url resolved https://registry.npmjs.org/-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+33 verbose request where is https://registry.npmjs.org/-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+34 info trying registry request attempt 1 at 16:37:30
+35 http PUT https://registry.npmjs.org/-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+36 http 403 https://registry.npmjs.org/-/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+37 verbose headers { date: 'Sat, 13 Dec 2014 16:37:29 GMT',
+37 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=60',
+37 verbose headers   'content-length': '124',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   'x-served-by': 'cache-lcy1135-LCY',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1418488648.651815,VS0,VE612',
+37 verbose headers   'keep-alive': 'timeout=10, max=50',
+37 verbose headers   connection: 'Keep-Alive' }
+38 verbose adduser back [ [Error: forbidden You may not change your email address
+38 verbose adduser   Please visit https://npmjs.org/email-edit to do so.: -/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca],
+38 verbose adduser   { error: 'forbidden',
+38 verbose adduser     reason: 'You may not change your email address\nPlease visit https://npmjs.org/email-edit to do so.' },
+38 verbose adduser   '{"error":"forbidden","reason":"You may not change your email address\\nPlease visit https://npmjs.org/email-edit to do so."}' ]
+39 warn adduser Incorrect username or password
+39 warn adduser You can reset your account by visiting:
+39 warn adduser
+39 warn adduser     https://npmjs.org/forgot
+40 error Error: forbidden You may not change your email address
+40 error Please visit https://npmjs.org/email-edit to do so.: -/user/org.couchdb.user:jackokring/-rev/3-b772241c56c38459b626660a336458ca
+40 error     at RegClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+40 error     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+40 error     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:236:22)
+40 error     at Request.emit (events.js:98:17)
+40 error     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+40 error     at Request.emit (events.js:117:20)
+40 error     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+40 error     at IncomingMessage.emit (events.js:117:20)
+40 error     at _stream_readable.js:943:16
+40 error     at process._tickCallback (node.js:419:13)
+41 error If you need help, you may report this *entire* log,
+41 error including the npm and node versions, at:
+41 error     <http://github.com/npm/npm/issues>
+42 error System Linux 3.2.0-4-686-pae
+43 error command "/usr/bin/node" "/usr/bin/npm" "adduser"
+44 error cwd /home/jacko/Node
+45 error node -v v0.10.33
+46 error npm -v 1.4.28
+47 verbose exit [ 1, true ]
