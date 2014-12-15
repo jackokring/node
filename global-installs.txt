@@ -1,1 +1,3 @@
-express handlebars nodemon flatten-packages less body-parser qs
+express handlebars nodemon flatten-packages less body-parser qs mongodb underscore underscore.string jquery
+
+java ...

@@ -27,7 +27,7 @@ app.all('/php/:script',
 	function(req, res, next) {
 		var query = qs.stringify(req.query , {delimiter: ' '});
 		query += ' ' + qs.stringify(req.body , {delimiter: ' '});
-		exec("php-cgi -q " + req.param('script') + ".php " + query,
+		exec("php-cgi -q ./php/" + req.param('script') + ".php " + query,
 			function (error, stdout, stderr) {
 				res.send(stdout);
 				console.log(stderr);
