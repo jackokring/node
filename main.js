@@ -21,12 +21,12 @@ app.use(bodyParser.urlencoded({   // to support URL-encoded bodies
 //php-cgi .deb processing with $_GET too, and also no file POST vars but not cookies
 //-q option surpresses headers from php-cgi
 var exec = require("child_process").exec;
-var qs = require('querystring');
+var qs = require('qs');
 
 app.all('/php/:script',
 	function(req, res, next) {
-		var query = qs.stringify(req.query , ' ');
-		var query += ' ' + qs.stringify(req.body , ' ');
+		var query = qs.stringify(req.query , {delimiter: ' '});
+		query += ' ' + qs.stringify(req.body , {delimiter: ' '});
 		exec("php-cgi -q " + req.param('script') + ".php " + query,
 			function (error, stdout, stderr) {
 				res.send(stdout);
