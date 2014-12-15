@@ -1,1 +1,1 @@
-express handlebars nodemon flatten-packages querystring url
+express handlebars nodemon flatten-packages querystring url less body-parser
