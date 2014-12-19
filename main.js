@@ -38,4 +38,20 @@ app.all('/php/:script',
 	}
 );
 
+//a special to run the jsoftware.com j language .deb package rename ijconsole via exec
+app.all('/j/:script',
+	function(req, res, next) {
+		var query = qs.stringify(req.query , {delimiter: ' '});
+		query += ' ' + qs.stringify(req.body , {delimiter: ' '});
+		exec("ijconsole -jprofile ./j/" + req.param('script') + ".j " + query,
+			function (error, stdout, stderr) {
+				res.send(stdout);
+				console.log(stderr);
+				next(); //here to complete ...
+			}
+		);
+		//next(); <-- must not do as it prevents exec return doing a res.send()
+	}
+);
+
 app.listen(3000);
